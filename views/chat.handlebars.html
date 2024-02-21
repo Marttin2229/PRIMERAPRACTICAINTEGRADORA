@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Chat App</title>
+</head>
+<body>
+  <h1>Chat App</h1>
+  
+  <div id="chat-window">
+    {{#each messages}}
+      <div class="message">
+        <strong>{{this.user}}</strong>: {{this.message}}
+      </div>
+    {{/each}}
+  </div>
+
+  <form id="message-form" action="/send-message" method="post">
+    <input type="text" name="user" placeholder="Tu nombre">
+    <input type="text" name="message" placeholder="Mensaje">
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
